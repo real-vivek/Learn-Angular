@@ -3,16 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { StudentComponent } from './student/student.component';
+import { StudentsComponent } from './students/students.component';
 
 //Module is used to bundle different pieces together in package
 //AppModule mmodule is a module that bundles all our application components
 @NgModule({
   //Here we have entry of all the components in our application
   //We do this because Angular doesn't automatically scan our folders to find the components
-  //Register the component created with angular by having an entry in declarations array
+  //Register the component created without cli by having an entry in declarations array
+  //If we create component using cli and entry is automatically made
   declarations: [
     AppComponent,
-    StudentComponent
+    StudentComponent,
+    StudentsComponent
   ],
   imports: [
     BrowserModule
