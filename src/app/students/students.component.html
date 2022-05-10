@@ -1,3 +1,9 @@
+<label>Server Name</label>
+<!-- $event between "" is the data emitted by that event -->
+<input type="text" 
+       class="form-control"
+       (input)="onUpdateStudentName($event)">
+<div>{{studentName}}</div>
 <!-- Normal HTML sets specific property on the underlying DOM element 
      Each HTML element is parsed by the browser and translated to and element on the document object model
      Therefore we have element in the dom that has couple of properties/ attributes

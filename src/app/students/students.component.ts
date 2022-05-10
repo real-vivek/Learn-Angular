@@ -11,6 +11,7 @@ export class StudentsComponent implements OnInit {
 
   allowNewServer=false;
   studentCreationStatus='No server was created';
+  studentName='';
 
     constructor(){
         setTimeout(()=>{
@@ -25,4 +26,7 @@ export class StudentsComponent implements OnInit {
     this.studentCreationStatus='Student was created';
   }
 
+  onUpdateStudentName(event:any){
+    this.studentName=event.target.value;
+  }
 }
