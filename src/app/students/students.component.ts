@@ -10,6 +10,8 @@ import { Component, OnInit } from '@angular/core';
 export class StudentsComponent implements OnInit {
 
   allowNewServer=false;
+  studentCreationStatus='No server was created';
+
     constructor(){
         setTimeout(()=>{
             this.allowNewServer=true;
@@ -17,6 +19,10 @@ export class StudentsComponent implements OnInit {
     }
 
   ngOnInit(): void {
+  }
+  
+  onStudentCreation(){
+    this.studentCreationStatus='Student was created';
   }
 
 }
