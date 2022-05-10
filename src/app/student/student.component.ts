@@ -4,7 +4,11 @@ import { Component } from "@angular/core";
 @Component({
     selector:'app-student',
     templateUrl:'./student.component.html',
-    styleUrls:['./student.component.css']
+    styles:[`
+    .online{
+        color:white
+    }
+    `]
 })
 //We export this class because we need to register it in app module
 export class StudentComponent{
