@@ -10,5 +10,8 @@
      Using [] we are not using the disabled property but we are directly binding to native disable property in the HTML element has
 -->
 <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onStudentCreation()">Add Student</button>
-<p *ngIf="studentCreated">{{studentCreationStatus}}</p>
+<p *ngIf="studentCreated; else noStudent">{{studentCreationStatus}}</p>
+<ng-template #noStudent> 
+     <p>No student created</p> 
+</ng-template>
 <app-student></app-student>
