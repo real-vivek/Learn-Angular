@@ -11,4 +11,10 @@ export class StudentComponent{
     //number can be converted to string so it can be used for string interpolcation
     studentId=1;
     studentStatus='present';
+    constructor(){
+        this.studentStatus=Math.random()>0.5?'present':'absent';
+    }
+    getColor(){
+        return this.studentStatus=='present'?'green':'red';
+    }
 }
