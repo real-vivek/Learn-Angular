@@ -11,7 +11,7 @@ export class StudentsComponent implements OnInit {
 
   allowNewServer=false;
   studentCreationStatus='No server was created';
-  studentName='';
+  studentName='Test Name';
 
     constructor(){
         setTimeout(()=>{
