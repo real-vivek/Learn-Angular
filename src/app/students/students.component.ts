@@ -13,6 +13,7 @@ export class StudentsComponent implements OnInit {
   studentCreationStatus='No server was created';
   studentName='Test Name';
   studentCreated=false;
+  studentList=['Student1','Student2'];
 
     constructor(){
         setTimeout(()=>{
@@ -25,6 +26,7 @@ export class StudentsComponent implements OnInit {
   
   onStudentCreation(){
     this.studentCreated=true;
+    this.studentList.push(this.studentName);
     this.studentCreationStatus='Student was created with name: '+this.studentName;
   }
 

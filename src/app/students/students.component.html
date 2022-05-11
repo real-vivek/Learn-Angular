@@ -14,5 +14,4 @@
 <ng-template #noStudent> 
      <p>No student created</p> 
 </ng-template>
-<app-student></app-student>
-<app-student></app-student>
+<app-student *ngFor="let student of studentList"></app-student>
