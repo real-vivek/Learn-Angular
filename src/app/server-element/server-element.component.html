@@ -1,0 +1,11 @@
+<!-- This component will add server or blueprint -->
+<div
+        class="card card-default">
+        <div class="card-header"> <strong> {{ element.name }} </strong></div>
+        <div class="card-body">
+          <p>
+            <strong *ngIf="element.type === 'server'" style="color: red">{{ element.content }}</strong>
+            <em *ngIf="element.type === 'blueprint'">{{ element.content }}</em>
+          </p>
+        </div>
+      </div>
