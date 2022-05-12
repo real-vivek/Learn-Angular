@@ -1,9 +1,9 @@
-import { Component, OnInit,EventEmitter, Output } from '@angular/core';
+import { Component, OnInit,EventEmitter, Output, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-cockpit',
   templateUrl: './cockpit.component.html',
-  styleUrls: ['./cockpit.component.css']
+  styleUrls: ['./cockpit.component.css'],
 })
 export class CockpitComponent implements OnInit {
   //Name of these properties is same as that in parent components HTML template where they are bound inside ()
