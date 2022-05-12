@@ -1,0 +1,5 @@
+/* We have added this property here becasue css styles from parent don't get applied to elements in child component */
+/* If we want to show blueprint created in blue we have to add this in child component */
+p {
+    color: blue;
+  }

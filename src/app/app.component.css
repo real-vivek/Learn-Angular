@@ -2,6 +2,10 @@
   margin-top: 30px;
 }
 
+/* Note that this style is no longer applicable to child elements */
+/* This is because angular enforces style encapsulation i.e. the style defined in component will be applied to that compoment only */
+/* Angular does this by assigning each element in a component a unique attribute like p[_ngcontent-ejo-2] */
+/* Thus if we want to apply this style to child compmonent we need to copy it to the child components */
 p {
   color: blue;
 }
