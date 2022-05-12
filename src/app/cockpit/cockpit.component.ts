@@ -11,7 +11,7 @@ export class CockpitComponent implements OnInit {
   //If we want to give other name to event instead of the default property name we can specify it in () as alias
   @Output('srvCreated') serverCreated= new EventEmitter<{name:string,content:string}>();
   @Output() blueprintCreated= new EventEmitter<{name:string,content:string}>();
-  newServerName = '';
+  // newServerName = '';
   newServerContent = '';
 
   constructor() { }
@@ -19,19 +19,21 @@ export class CockpitComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onAddServer() {
+  // We get the local reference as parameter here
+  // The local reference is reference to whole element and not specific property on the HTML element
+  onAddServer(serverInputName:HTMLInputElement) {
    this.serverCreated.emit(
      {
-       name:this.newServerName,
+       name:serverInputName.value,
        content:this.newServerContent
      }
    );
   }
 
-  onAddBlueprint() {
+  onAddBlueprint(serverInputName:HTMLInputElement) {
     this.blueprintCreated.emit(
       {
-        name:this.newServerName,
+        name:serverInputName.value,
         content:this.newServerContent
       }
     );
