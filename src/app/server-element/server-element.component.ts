@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Type } from '@angular/core';
 
 
 
@@ -12,7 +12,8 @@ export class ServerElementComponent implements OnInit {
   //If we see error add "strictPropertyInitialization": false in tsconfig.json file in "compilerOptions" object
   //This property will be accessible inside the component and not outside it if we don't have @Input
   //To expose this property so that parent component can bind to it we use @Input() decorator
-  @Input() element: { name: string, type: string, content: string };
+  //If we want to use the same property outside the component as inside we can give alias in ()
+  @Input('servElement') element: { name: string, type: string, content: string };
   constructor() { }
 
   ngOnInit(): void {
