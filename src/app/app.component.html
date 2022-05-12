@@ -4,7 +4,9 @@
   <div class="row">
     <div class="col-xs-12">
       <!-- Here we need to pass the serverElement for iteration to the child component app-server-element which will be executed in next commit-->
-      <app-server-element *ngFor="let serverElement of serverElements"></app-server-element>
+      <!-- We can compare this to  binding the disabled attribute where the property was set on the HTML element-->
+      <!-- Here instead of binding to HTML element the attribute that we pass(serverElement) is set on the attribute of the child element(element) -->
+      <app-server-element [element]="serverElement" *ngFor="let serverElement of serverElements"></app-server-element>
     </div>
   </div>
 </div>

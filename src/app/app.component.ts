@@ -10,5 +10,11 @@ export class AppComponent {
     name:'server1',
     type:'server',
     content:'server1 desc'
-  }];
+  },
+  {
+    name:'server2',
+    type:'blueprint',
+    content:'server2 desc'
+  }
+];
 }
