@@ -2,7 +2,7 @@
   <!-- We want to listen to event serverCreated this event occurs in child -->
   <!-- We can compare this to binding event like (click) event we can pass event data using $event just like we did when we were listening to the event-->
   <!-- Here we have custom event name serverCreated which will be emitted by app-cockpit -->
-  <app-cockpit (serverCreated)="onServerAdded($event)"
+  <app-cockpit (srvCreated)="onServerAdded($event)"
                (blueprintCreated)="onBlueprintAdded($event)"></app-cockpit>
   <hr>
   <div class="row">

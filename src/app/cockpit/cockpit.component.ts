@@ -8,7 +8,8 @@ import { Component, OnInit,EventEmitter, Output } from '@angular/core';
 export class CockpitComponent implements OnInit {
   //Name of these properties is same as that in parent components HTML template where they are bound inside ()
   //We add @Output so that these properties are listenable from outside
-  @Output() serverCreated= new EventEmitter<{name:string,content:string}>();
+  //If we want to give other name to event instead of the default property name we can specify it in () as alias
+  @Output('srvCreated') serverCreated= new EventEmitter<{name:string,content:string}>();
   @Output() blueprintCreated= new EventEmitter<{name:string,content:string}>();
   newServerName = '';
   newServerContent = '';
